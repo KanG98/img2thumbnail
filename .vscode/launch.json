@@ -1,0 +1,20 @@
+{
+    "configurations": [
+
+        {
+            "type": "aws-sam",
+            "request": "direct-invoke",
+            "name": "Desktop:generateThumbnail/index.handler (nodejs12.x)",
+            "invokeTarget": {
+                "target": "code",
+                "projectRoot": "",
+                "lambdaHandler": "generateThumbnail/index.handler"
+            },
+            "lambda": {
+                "runtime": "nodejs12.x",
+                "payload": {},
+                "environmentVariables": {}
+            }
+        }
+    ]
+}
