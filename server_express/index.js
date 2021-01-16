@@ -1,5 +1,5 @@
 const express = require("express");
-const server = require('http')
+const server = require('http');
 const app = express();
 
 // config
@@ -9,7 +9,7 @@ require("./startup/config")();
 require("./startup/bodyParser")(app);
 
 // middle
-require("./middlewares").init(app);
+require("./middlewares/formData").init(app);
 
 // routes
 require("./routes/image")(app);

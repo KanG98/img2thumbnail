@@ -1,6 +1,5 @@
 const AWS = require('aws-sdk');
 AWS.config.update({ region: process.env.REGION });
-const s3 = new AWS.S3();
 
 class S3Service {
   defaultOptions = { partSize: 10 * 720 * 1280};

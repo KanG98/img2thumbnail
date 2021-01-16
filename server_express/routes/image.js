@@ -1,10 +1,9 @@
 const express = require("express");
 const router = express.Router();
-const uploadTypes = require("../startup/formDataConfig")();
-const s3Service = require('../services/s3Service')();
-const imageMiddleWare = require('../middlewares/formData').formDataTypes.image;
+const s3Service = require('../services/s3Service');
+const imageMiddleware = require('../middlewares/formData').formDataTypes.image;
 
-router.post('/image', imageMiddleWare, (req, res) => {
+router.post('/image', imageMiddleware, (req, res) => {
     const params = { 
         Bucket: process.env.BUCKET_NAME, 
         Key: req.file.filename, 
