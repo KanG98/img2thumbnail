@@ -1,0 +1,6 @@
+This repo is a simple demonstration of how aws lambda can act as a worker service.
+
+Data Work Flow:
+Users upload images from a react user interface to an express api server using FormData. 
+An api route of the api server would handle the requests with FormData, and upload images to AWS s3. 
+GenerateThumbnail lambda function would be triggered if any images are uploaded to s3, generating a thumbnail and uplaoding the output to s3. 
